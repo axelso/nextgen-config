@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: reservations
+
+server:
+  port: ${PORT:9999}
