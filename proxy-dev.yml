@@ -1,25 +1,23 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
+server:
+  port: 4000
 
-ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 zuul:
-  ignoredServices: '*'
+  #ignoredServices: '*'
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
+  
+  prefix: /api
 
   routes:
-    reservation-service:
-      path: /reservations
-      serviceId: reservation-service
+    rest-producer:
+      path: /greeting/**
+      serviceId: REST-PRODUCER
       stripPrefix: false
       #sensitiveHeaders:
 
@@ -28,6 +26,3 @@ zuul:
       url: http://localhost:5000
       stripPrefix: false
       #sensitiveHeaders:
-
-server:
-  port: 4000
