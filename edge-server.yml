@@ -11,7 +11,9 @@ endpoints:
 
 zuul:
   routes:
-    stores: /stores/**
+    stores: 
+      path: /stores/**
+      serviceId: REST-PRODUCER
     customers: /customers/**
     zuulserver: /self/**
 

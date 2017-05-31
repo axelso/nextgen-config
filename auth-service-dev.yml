@@ -1,7 +1,4 @@
-security:
-  user:
-    password: password
-
 server:
   contextPath: /uaa
   port: 5000
+

@@ -11,6 +11,9 @@ endpoints:
 
 zuul:
   routes:
+    uaa-service:
+      sensitiveHeaders:
+      path: /uaa/**
     stores: 
       path: /stores/**
       serviceId: REST-PRODUCER
