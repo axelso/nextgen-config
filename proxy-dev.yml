@@ -23,6 +23,7 @@ endpoints:
     sensitive: false
 
 zuul:
+  sensitiveHeaders:
   ignoredServices: '*'
   host:
     connect-timeout-millis: 20000
