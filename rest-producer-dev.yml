@@ -2,6 +2,9 @@ server:
   contextPath: /rest
   port: 9091
 
+info:
+  component: Rest Producer
+
 #eureka:
 #  client:
 #    serviceUrl:
