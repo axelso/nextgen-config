@@ -1,6 +1,6 @@
 server:
-  contextPath: /rest
-  port: 9091
+  contextPath: /stores
+  port: 9090
 
 info:
   component: Rest Producer
