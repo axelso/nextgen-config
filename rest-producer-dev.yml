@@ -13,7 +13,7 @@ security:
     client:
       accessTokenUri: http://localhost:5000/uaa/oauth/token
       userAuthorizationUri: /uaa/oauth/authorize
-      clientId: acme
+      clientId: acme1
       clientSecret: acmesecret
     resource:
       userInfoUri: http://localhost:5000/uaa/users/current
