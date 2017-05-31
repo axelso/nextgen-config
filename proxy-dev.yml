@@ -31,11 +31,11 @@ zuul:
   prefix: /api
 
   routes:
-    auth-service:
-      path: /uaa/**
-      host: http://localhost:5000
+    #auth-service:
+    #  path: /uaa/**
+    #  host: http://localhost:5000
       #serviceId: AUTH-SERVICE
-      stripPrefix: false
+    #  stripPrefix: false
       #sensitiveHeaders:
     rest-producer:
       path: /greeting/**

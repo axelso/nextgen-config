@@ -1,10 +1,10 @@
 server:
   port: 4000
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
 zuul:
   ignoredServices: '*'
@@ -12,9 +12,9 @@ zuul:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
 
-  routes:
-    auth-service:
-      path: /uaa/**
-      url: http://localhost:5000
-      stripPrefix: false
+  #routes:
+  #  auth-service:
+  #    path: /uaa/**
+  #    url: http://localhost:5000
+  #    stripPrefix: false
       #sensitiveHeaders:
