@@ -39,8 +39,8 @@ zuul:
     #  stripPrefix: false
       #sensitiveHeaders:
     rest-producer:
-      path: /greeting/**
-      #serviceId: REST-PRODUCER
-      host: http://localhost:9090
+      path: /rest/**
+      serviceId: REST-PRODUCER
+      #host: http://localhost:9091
       stripPrefix: false
       #sensitiveHeaders:
