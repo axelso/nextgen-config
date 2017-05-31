@@ -1,9 +1,22 @@
 server:
   contextPath: /stores
-  port: 9090
+  port: 9091
 
 info:
   component: Rest Producer
+
+security:
+  # Disable Spring Boot basic authentication
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      userAuthorizationUri: /uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+      userInfoUri: http://localhost:5000/uaa/users/current
 
 #eureka:
 #  client:
