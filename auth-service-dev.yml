@@ -1,12 +1,7 @@
-spring:
-  data:
-    mongodb:
-      host: localhost
-      username: user
-      password: ${MONGODB_PASSWORD}
-      database: test_database
-      port: 27017
+security:
+  user:
+    password: password
 
 server:
-  context-path: /uaa
+  contextPath: /uaa
   port: 5000

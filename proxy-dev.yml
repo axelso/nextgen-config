@@ -1,10 +1,26 @@
 server:
   port: 4000
 
+info:
+  component: Zuul Server
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:5000/uaa/users/current
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
 
 zuul:
   ignoredServices: '*'
@@ -15,14 +31,15 @@ zuul:
   prefix: /api
 
   routes:
-    rest-producer:
-      path: /greeting/**
-      serviceId: REST-PRODUCER
-      stripPrefix: false
-      #sensitiveHeaders:
-
     auth-service:
       path: /uaa/**
-      serviceId: AUTH-SERVICE
+      host: http://localhost:5000
+      #serviceId: AUTH-SERVICE
+      stripPrefix: false
+      #sensitiveHeaders:
+    rest-producer:
+      path: /greeting/**
+      #serviceId: REST-PRODUCER
+      host: http://localhost:9090
       stripPrefix: false
       #sensitiveHeaders:
