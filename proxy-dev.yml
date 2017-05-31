@@ -4,15 +4,15 @@ server:
 info:
   component: Zuul Server
 
-security:
-  oauth2:
-    resource:
-      userInfoUri: http://localhost:5000/uaa/users/current
+#security:
+#  oauth2:
+#    resource:
+#      userInfoUri: http://localhost:5000/uaa/users/current
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
 endpoints:
   restart:
